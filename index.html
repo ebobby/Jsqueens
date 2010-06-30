@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Queen Problem</title>
+        <link type="text/css" rel="stylesheet" href="css/board.css"/>
+        <script language="JavaScript" src="scripts/constants.js"></script>
+        <script language="JavaScript" src="scripts/drawing.js"></script>
+        <script language="JavaScript" src="scripts/simulated_annealing.js"></script>
+        <script language="JavaScript" src="scripts/queens.js"></script>
+        <script language="JavaScript" src="scripts/console.js"></script>
+        <script language="JavaScript" src="scripts/graph.js"></script>
+        <script language="JavaScript" src="scripts/application.js"></script>
+	</head>
+	<body>
+        <div class="container">
+            <div>
+                <p>
+        	    <table class="board">
+        	        <tr>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+           	        </tr>
+        	        <tr>
+        	            <td class="black_square"></td>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+           	        </tr>
+        	        <tr>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+           	        </tr>
+        	        <tr>
+        	            <td class="black_square"></td>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+           	        </tr>
+        	        <tr>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+           	        </tr>
+        	        <tr>
+        	            <td class="black_square"></td>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+           	        </tr>
+        	        <tr>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+           	        </tr>
+        	        <tr>
+        	            <td class="black_square"></td>
+                        <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+        	            <td class="black_square"></td>
+        	            <td class="white_square"></td>
+           	        </tr>
+        	    </table>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <input type="button" value="Solve it!" onclick="App.Start();" />
+                </p>
+            </div>
+            <div id="console"></div>
+            <div id="graph"></div>
+        </div>
+	</body>
+</html>
