@@ -1,9 +1,12 @@
-div.container   { width: 640px; margin: 0 auto; }
-table.board     { border: solid 1px black; margin: 0 auto; }
-td              { width: 3pc; height: 3pc; }
-td img          { margin-left: auto; margin-right: auto; display: block; }
-td.white_square { background-color: white; }
-td.black_square { background-color: black; }
-input           { border: solid 1px black; margin: 0 auto; display: block; }
-div#console     { text-align: center; }
-.bordered       { border: solid 1px black; margin: 0 auto; display: block; }
+div.container       { width: 640px; margin: 0 auto; }
+div.board_container { float: left; }
+table.board         { border: solid 1px black; margin: 0 auto; }
+td                  { width: 3pc; height: 3pc; }
+td img              { margin-left: auto; margin-right: auto; display: block; }
+td.white_square     { background-color: white; }
+td.black_square     { background-color: black; }
+input               { border: solid 1px black; margin: 0 auto; display: block; }
+div.controls        { float: right;}
+.bordered           { border: solid 1px black; margin: 0 auto; display: block; }
+div#console         { padding-top: 20px; text-align: center; clear: both;}
+div#graph           { clear: both; }

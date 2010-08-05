@@ -2,25 +2,30 @@
  * @author Francisco Soto <ebobby@gmail.com>
  */
 var App = (function () {
-    var intervalId = 0,
+    var intervalId     = 0,
         alreadyRunning = false;
+
+    function GetOptions () {
+        return {
+            initialTemperature:  document.getElementById('initial_temperature').value,
+            initialStabilizer:   document.getElementById('initial_stabilizer').value,
+            coolingFactor:       document.getElementById('cooling_factor').value,
+            stabilizingFactor:   document.getElementById('stabilizing_factor').value,
+            freezingTemperature: document.getElementById('freezing_temperature').value
+        };
+    }
 
     return {
         Start: function() {
             if (alreadyRunning) {
-                return;
+                clearInterval(intervalId);
             }
 
-            var options = {
-                initialTemperature: 35.0,
-                initialStabilizer: 35.0,
-                coolingFactor: 0.05,
-                stabilizingFactor: 1.005,
-                freezingTemperature: 0.0,
-                generateNewSolution: Queens.GenerateRandomPositions,
-                generateNeighbor: Queens.GenerateNeighbor,
-                acceptNeighbor: Queens.AcceptNeighbor
-            };
+            var options = GetOptions();
+
+            options.generateNewSolution = Queens.GenerateRandomPositions;
+            options.generateNeighbor    = Queens.GenerateNeighbor;
+            options.acceptNeighbor      = Queens.AcceptNeighbor;
 
             Draw.Initialize();
             Graph.Initialize((options.initialTemperature - options.freezingTemperature) / options.coolingFactor, Constants.MAX_POSSIBLE_ATTACKS);
@@ -37,7 +42,7 @@ var App = (function () {
                               '&nbsp;&nbsp;&nbsp;',
                               'System temperature:', SimulatedAnnealing.GetCurrentTemperature());
                 Graph.Point(SimulatedAnnealing.GetCurrentEnergy());
-                
+
                 if (done === true) {
                     clearInterval(intervalId);
                     alreadyRunning = false;
