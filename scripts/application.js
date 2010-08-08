@@ -7,11 +7,11 @@ var App = (function () {
 
     function GetOptions () {
         return {
-            initialTemperature:  document.getElementById('initial_temperature').value,
-            initialStabilizer:   document.getElementById('initial_stabilizer').value,
-            coolingFactor:       document.getElementById('cooling_factor').value,
-            stabilizingFactor:   document.getElementById('stabilizing_factor').value,
-            freezingTemperature: document.getElementById('freezing_temperature').value
+            initialTemperature:  parseFloat(document.getElementById('initial_temperature').value),
+            initialStabilizer:   parseFloat(document.getElementById('initial_stabilizer').value),
+            coolingFactor:       parseFloat(document.getElementById('cooling_factor').value),
+            stabilizingFactor:   parseFloat(document.getElementById('stabilizing_factor').value),
+            freezingTemperature: parseFloat(document.getElementById('freezing_temperature').value)
         };
     }
 
@@ -52,5 +52,5 @@ var App = (function () {
 
             alreadyRunning = true;
         }
-    }
+    };
 })();
