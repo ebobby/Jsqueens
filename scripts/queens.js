@@ -67,16 +67,8 @@
             var oldX = newQueensPositions[changingQueen].x;
             var oldY = newQueensPositions[changingQueen].y;
 
-            newQueensPositions[changingQueen].x = (newQueensPositions[changingQueen].x + (parseInt(Math.random() * 3) - 1)) % 8;
-            newQueensPositions[changingQueen].y = (newQueensPositions[changingQueen].y + (parseInt(Math.random() * 3) - 1)) % 8;
-
-            if (newQueensPositions[changingQueen].x < 0) {
-                newQueensPositions[changingQueen].x = newQueensPositions[changingQueen].x + 8;
-            }
-
-            if (newQueensPositions[changingQueen].y < 0) {
-                newQueensPositions[changingQueen].y = newQueensPositions[changingQueen].y + 8;
-            }
+            newQueensPositions[changingQueen].x = (((newQueensPositions[changingQueen].x + (parseInt(Math.random() * 3) - 1)) % 8) + 8) % 8;
+            newQueensPositions[changingQueen].y = (((newQueensPositions[changingQueen].y + (parseInt(Math.random() * 3) - 1)) % 8) + 8) % 8;
 
             if (!_checkRepetitions(newQueensPositions)) {
                 repetitions = false;
